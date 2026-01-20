@@ -30,5 +30,6 @@ VALIDATE(){
 for package in $@
 
 do
-    echo "Package is: $Package"
+    dnf list installed $package &>>$LOGS_FOLDER
+    
 done
